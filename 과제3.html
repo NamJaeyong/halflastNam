@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+<button class="dogbt" type="submit">개</button>
+<img id="img_form_url" src="">
+
+
+
+
+<script>
+
+    $('.dogbt').click(function(){
+       
+        $.getJSON('https://dog.ceo/api/breeds/image/random', function (data) {
+            console.log(data.message);
+            $('#img_form_url').attr("src", data.message);
+        });
+         
+                });  
+
+   
+
+ 
+
+</script>
+</body>
+</html>
